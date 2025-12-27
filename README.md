@@ -32,3 +32,40 @@ Make sure you have **Python 3.8+** installed.
 
 ```bash
 python aes_sbox.py
+```
+
+### 2. Run cryptographic analysis (differential uniformity)
+
+```bash
+python analysis.py
+```
+
+Expected result:
+
+```
+Differential Uniformity (δ): 4
+AES S-box known nonlinearity (NL): 112
+```
+
+### Quick verification of key values
+You can also run this tiny snippet in any Python shell:
+
+```bash
+from aes_sbox import generate_aes_sbox
+sbox = generate_aes_sbox()
+print(f"sbox[0x00] = 0x{sbox[0]:02x}")     # Should be 63
+print(f"sbox[0x01] = 0x{sbox[1]:02x}")     # Should be 7c
+print(f"sbox[0x53] = 0x{sbox[0x53]:02x}")  # Should be ed
+```
+
+## Requirements
+
+• Python 3.8 or higher
+• No external libraries needed
+
+## License
+Educational / Academic use only 
+
+
+
+
