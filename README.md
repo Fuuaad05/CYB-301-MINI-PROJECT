@@ -60,8 +60,8 @@ print(f"sbox[0x53] = 0x{sbox[0x53]:02x}")  # Should be ed
 
 ## Requirements
 
-• Python 3.8 or higher
-• No external libraries needed
+- Python 3.8 or higher
+- No external libraries needed
 
 ## License
 Educational / Academic use only 
